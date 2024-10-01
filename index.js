@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 import recetasRouter from './routes/recetas/recetasRoutes.js';
+import categoriasRouter from './routes/categorias/categoriaRoutes.js';
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.use(cors(corsOptions));
 
 const port = 3000;
 app.use('/recetas',recetasRouter);
+app.use('/categorias',categoriasRouter);
 
 app.listen(port, () => {
     console.log(`Servidor corriendo en el puerto ${port}`);
