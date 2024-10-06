@@ -6,6 +6,7 @@ dotenv.config();
 
 import recetasRouter from './routes/recetas/recetasRoutes.js';
 import categoriasRouter from './routes/categorias/categoriaRoutes.js';
+import categoriasRecetasRouter from './routes/categorias/categoriaRecetasRoutes.js';
 
 const app = express();
 
@@ -22,6 +23,7 @@ app.use(cors(corsOptions));
 
 const port = 3000;
 app.use('/recetas',recetasRouter);
+app.use('/recetas_categorias',categoriasRecetasRouter);
 app.use('/categorias',categoriasRouter);
 
 app.listen(port, () => {

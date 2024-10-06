@@ -1,4 +1,6 @@
-import { getCategorias, getCategoriasById } from "../../db/categorias/categoriaQueries.js";
+import { getCategorias} from "../../db/categorias/categoriaQueries.js";
+
+
 
 
 const getCategoriasController = async (req, res) => {
@@ -11,13 +13,4 @@ const getCategoriasController = async (req, res) => {
 
 }
 
-const getCategoriasByIdController = async (req, res) => {
-    try {
-        const categoria = await getCategoriasById(req.params.id);
-        res.json(categoria);
-    } catch (err) {
-        res.status(500).send(err);
-    }
-}
-
-export { getCategoriasController, getCategoriasByIdController };
+export { getCategoriasController};

@@ -1,14 +1,11 @@
 import {Router} from 'express';
 
 import{
-    getCategoriasController,
-    getCategoriasByIdController
+    getCategoriasController
 }
-from  './../../controllers/categorias/categoriaControllers.js'
-
+from '../../controllers/categorias/categoriaControllers.js'
 const categoriasRouter = Router();
 
 categoriasRouter.get('/', getCategoriasController);
-categoriasRouter.get('/:id', getCategoriasByIdController);
 
 export default categoriasRouter;
